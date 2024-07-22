@@ -6,7 +6,7 @@ ADC = smbus.SMBus(1)  # 使用I2C总线1
 ADDRESS = 0x24  # ADC的I2C地址
 REGISTER = 0x10  # 要读取的寄存器地址
 VREF = 5.0  # ADC参考电压
-MAX_ADC_VALUE = 1023  # ADC的最大值（12位ADC）
+MAX_ADC_VALUE = 1023  # ADC的最大值（10位ADC）
 VOLTAGE_TRANSFORM_RATIO = 250 / 5  # 变压器的电压转换比
 
 def read_raw_value():

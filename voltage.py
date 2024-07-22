@@ -11,7 +11,7 @@ VOLTAGE_TRANSFORM_RATIO = 250 / 5  # 变压器的电压转换比
 
 def read_raw_value():
     try:
-        raw_value = ADC.read_word_data(ADDRESS, REGISTER) & 0x03FF  # 只保留低12位数据
+        raw_value = ADC.read_word_data(ADDRESS, REGISTER) & 0x03FF  # 只保留低10位数据
         return raw_value
     except Exception as e:
         print(f"Error reading data: {e}")

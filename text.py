@@ -31,7 +31,7 @@ def convert_to_ac_current(adc_voltage):
         return 0
     elif adc_voltage > 2.8:
         adc_voltage = 2.8
-    return ((adc_voltage - 0.2) / (2.8 - 0.2)) * CURRENT_SENSOR_RANGE
+    return ((adc_voltage/2 - 0.2) / (2.8 - 0.2)) * CURRENT_SENSOR_RANGE
 
 # 数据采集循环
 sampling_duration = 10  # 采样时间（秒）

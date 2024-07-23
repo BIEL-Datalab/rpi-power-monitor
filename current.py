@@ -28,7 +28,7 @@ def convert_to_current(adc_voltage):
     elif adc_voltage > 2.8:
         adc_voltage = 2.8  # 限制最大电压为2.8V
     # 计算对应的电流值，信号转换模块的输出电压范围为0.2V到2.8V
-    ac_current = ((adc_voltage - 0.2) / (2.8 - 0.2)) * CURRENT_SENSOR_RANGE
+    ac_current = ((adc_voltage/2 - 0.2) / (2.8 - 0.2)) * CURRENT_SENSOR_RANGE
     return ac_current
 
 while True:

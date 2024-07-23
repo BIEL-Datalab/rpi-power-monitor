@@ -31,7 +31,7 @@ def convert_to_ac_current(adc_voltage):
         return 0  # 如果电压低于0.2V，电流为0
     elif adc_voltage > 2.8:
         adc_voltage = 2.8  # 限制最大电压为2.8V
-    ac_current = ((adc_voltage - 0.2) / (2.8 - 0.2)) * CURRENT_SENSOR_RANGE
+    ac_current = ((adc_voltage/2 - 0.2) / (2.8 - 0.2)) * CURRENT_SENSOR_RANGE
     return ac_current
 
 while True:
